@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>출력 및 크기에 영향을 주는 속성</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        a { text-decoration: none;}
+        .box1 {border: 5px solid #000; padding: 20px; margin: 40px; background-color: rgba(240,128,25,1); 
+            font-weight: 800; color: navy; width: 150px; height: 150px; transition: 0.5s; 
+            opacity: 1; visibility: visible;}
+
+        .wrap { clear: both; min-height: 100px; padding-top: 25px; padding-bottom: 25px;}
+        .wrap ::after {content: ""; display: block; width: 100%; clear: both;}
+        #wrap1 .box1{display: inline;}
+        #wrap2 .box1{display: block;}
+        #wrap1 .box1.itme2, #wrp .box1.itme2 {display: none;}
+        #wrap3 {}
+        #wrap4 {}
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center; padding-top: 2rem;"> 출력 및 크기에 영향을 주는</h1>
+    <hr>
+    <!--divs.wrap#wrap1>div.box1.item${박스$}*5-->
+    <divs class="wrap" id="wrap1">
+        <div class="box1 item1">박스1</div>
+        <div class="box1 item2">박스2</div>
+        <div class="box1 item3">박스3</div>
+        <div class="box1 item4">박스4</div>
+        <div class="box1 item5">박스5</div>
+    </divs>
+    <hr>
+    <!--div.wrap#wrap2>a.box1.item${박스$}*5-->
+    <div class="wrap" id="wrap2">
+        <a href="" class="box1 item1">박스1</a>
+        <a href="" class="box1 item2">박스2</a>
+        <a href="" class="box1 item3">박스3</a>
+        <a href="" class="box1 item4">박스4</a>
+        <a href="" class="box1 item5">박스5</a>
+    </div>
+    <!-- div.wrap#wrap3>span.box1.item${박스$}*5-->
+    <div class="wrap" id="wrap3">
+        <span class="box1 item1">박스1</span>
+        <span class="box1 item2">박스2</span>
+        <span class="box1 item3">박스3</span>
+        <span class="box1 item4">박스4</span>
+        <span class="box1 item5">박스5</span>
+    </div>
+    <!-- div.wrap#wrap4>span.box1.item${박스$}*5 -->
+    <div class="wrap" id="wrap4">
+        <span class="box1 item1">박스1</span>
+        <span class="box1 item2">박스2</span>
+        <span class="box1 item3">박스3</span>
+        <span class="box1 item4">박스4</span>
+        <span class="box1 item5">박스5</span>
+    </div>
+</body>
+</html>

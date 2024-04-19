@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경</title>
+    <style>
+    * { margin: 0; padding: 0; }
+    .page { clear:both; width: 100vw; height: 100vh; 
+        border-bottom:50px solid rgba(240,240,240,0.6); 
+        border-top:50px solid rgba(18,18,18,0.6); box-sizing:border-box; 
+        padding:5rem; }
+    /* clear-fix */
+    .page::after { content:""; display:block; width: 100%; clear:both; }    
+    .page_title { padding-top:1rem; padding-bottom:0.5rem; 
+        text-align:center; }
+    #page1 { background-color:deepskyblue; }
+    #page2 { background: linear-gradient(to bottom,  #a90329 0%,#54000c 100%); }
+    #page2 .page_title { color:#fff; }
+    #page3 { background-color: transparent; /* 배경투명 */ }
+    #page4 { background-image:url("./img/jen1.png"), url("./img/bts.jpg"); 
+    background-size:auto auto, 100% auto; background-repeat:no-repeat; 
+    background-position:center bottom; }
+    #page5 { background-image:url("./img/jen1.png"), url("./img/bts.jpg"); 
+    background-size:auto,auto; background-repeat:no-repeat, repeat;  }
+    #page6 { background-image:url("./img/jen1.png"), url("./img/bts.jpg"); 
+     background-repeat:no-repeat, repeat-y;  background-color:deeppink; }
+    #page7 { background-image:url("./img/jen1.png"), url("./img/bts.jpg"); 
+    background-size:auto auto, 100% auto; background-repeat:no-repeat; 
+    background-position:center bottom; background-attachment:fixed, scroll; }
+    #page8 { background-image:url("./img/jen1.png"), url("./img/bts.jpg"); 
+    background-size:auto auto, 100% auto; background-repeat:no-repeat; 
+    background-position:center bottom; background-attachment:fixed, scroll; 
+    background-origin:content-box; }
+    #page9 { background-image:url("./img/jen1.png"), url("./img/bts.jpg"); 
+    background-size:auto auto, 100% auto; background-repeat:no-repeat; 
+    background-position:center bottom; background-attachment:fixed, scroll; 
+    background-origin:content-box; background-clip: content-box; }
+    </style>
+</head>
+<body>
+    <section class="page" id="page1">
+        <h2 class="page_title">제목1</h2>
+    </section>
+    <section class="page" id="page2">
+        <h2 class="page_title">제목2</h2>
+    </section>
+    <section class="page" id="page3">
+        <h2 class="page_title">제목3</h2>
+    </section>
+    <section class="page" id="page4">
+        <h2 class="page_title">제목4</h2>
+    </section>
+    <section class="page" id="page5">
+        <h2 class="page_title">제목5</h2>
+    </section>
+    <section class="page" id="page6">
+        <h2 class="page_title">제목6</h2>
+    </section>
+    <section class="page" id="page7">
+        <h2 class="page_title">제목7</h2>
+    </section>
+    <section class="page" id="page8">
+        <h2 class="page_title">제목8</h2>
+    </section>
+    <section class="page" id="page9">
+        <h2 class="page_title">제목9</h2>
+    </section>
+    <section class="page" id="page10">
+        <h2 class="page_title">제목10</h2>
+    </section>
+    <section class="page" id="page11">
+        <h2 class="page_title">제목11</h2>
+    </section>
+    <section class="page" id="page12">
+        <h2 class="page_title">제목12</h2>
+    </section>
+    <section class="page" id="page13">
+        <h2 class="page_title">제목13</h2>
+    </section>
+    <section class="page" id="page14">
+        <h2 class="page_title">제목14</h2>
+    </section>
+    <section class="page" id="page15">
+        <h2 class="page_title">제목15</h2>
+    </section>
+    <section class="page" id="page16">
+        <h2 class="page_title">제목16</h2>
+    </section>
+    <section class="page" id="page17">
+        <h2 class="page_title">제목17</h2>
+    </section>
+    <section class="page" id="page18">
+        <h2 class="page_title">제목18</h2>
+    </section>
+    <section class="page" id="page19">
+        <h2 class="page_title">제목19</h2>
+    </section>
+    <section class="page" id="page20">
+        <h2 class="page_title">제목20</h2>
+    </section>
+</body>
+</html>

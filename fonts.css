@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'NNG';
+    font-style: normal;
+    font-weight:400;
+    src: url(nanumgothic.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'NTS';
+    font-style: normal;
+    font-weight:400;
+    src: url(noto.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'NNP';
+    font-style: normal;
+    font-weight:400;
+    src: url(namunpen.woff2) format('woff2');
+}
+
+
+@font-face {
+    font-family: 'Gamja Flower';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./Gamja Flower.woff2) format('woff2');
+}

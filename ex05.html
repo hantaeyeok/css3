@@ -7,30 +7,62 @@
     <style>
         * {margin: 0; padding: 0;}
         a { text-decoration: none;}
-        .box1 {border: 5px solid #000; padding: 20px; margin: 40px; background-color: rgba(240,128,25,1); 
+
+        .box1 {border: 5px solid #000; padding:10px; margin: 100px; 
+            
+            background-color: rgba(240,128,25,1); 
             font-weight: 800; color: navy; width: 150px; height: 150px; transition: 0.5s; 
             opacity: 1; visibility: visible;}
 
         .wrap { clear: both; min-height: 100px; padding-top: 25px; padding-bottom: 25px;}
-        .wrap ::after {content: ""; display: block; width: 100%; clear: both;}
-        #wrap1 .box1{display: inline;}
+        
+        .wrap ::after {content:""; display: block; width: 100%; clear: both;}
+        #wrap1 .box1{display: inline-block;  }
+        #wrap1 .box1.box1.item1 {}
+        #wrap1 .box1.box1.item2 {}
+        #wrap1 .box1.box1.item3 {}
+        #wrap1 .box1.box1.item4 {}
+        #wrap1 .box1.box1.item5 {}
+
+        
+        
         #wrap2 .box1{display: block;}
-        #wrap1 .box1.itme2, #wrp .box1.itme2 {display: none;}
-        #wrap3 {}
-        #wrap4 {}
+        #wrap2 .box1.item1 {}
+        #wrap2 .box1.item2 {}
+        #wrap2 .box1.item3 {}
+        #wrap2 .box1.item4 {}
+        #wrap2 .box1.item5 {border-redu;}
+
+
+
+
+
+        #wrap3 .box1{clear: both; display: inline-block; }
+       
+
+
+        #wrap4 .box1 {display: inline-block;}
+        #wrap4 .box1.item1 {overflow: visible;}
+        #wrap4 .box1.item2 {overflow: hidden;}
+        #wrap4 .box1.item3 {overflow: auto;}
+        #wrap4 .box1.item4 {overflow: scroll;}
+        #wrap4 .box1.item5 {overflow: scroll;}
+    
+       
+      
     </style>
 </head>
 <body>
     <h1 style="text-align:center; padding-top: 2rem;"> 출력 및 크기에 영향을 주는</h1>
     <hr>
     <!--divs.wrap#wrap1>div.box1.item${박스$}*5-->
-    <divs class="wrap" id="wrap1">
+    <div class="wrap" id="wrap1" content:"">
         <div class="box1 item1">박스1</div>
         <div class="box1 item2">박스2</div>
         <div class="box1 item3">박스3</div>
         <div class="box1 item4">박스4</div>
         <div class="box1 item5">박스5</div>
-    </divs>
+    </div>
     <hr>
     <!--div.wrap#wrap2>a.box1.item${박스$}*5-->
     <div class="wrap" id="wrap2">
@@ -48,13 +80,14 @@
         <span class="box1 item4">박스4</span>
         <span class="box1 item5">박스5</span>
     </div>
+    <hr>
     <!-- div.wrap#wrap4>span.box1.item${박스$}*5 -->
     <div class="wrap" id="wrap4">
-        <span class="box1 item1">박스1</span>
-        <span class="box1 item2">박스2</span>
-        <span class="box1 item3">박스3</span>
-        <span class="box1 item4">박스4</span>
-        <span class="box1 item5">박스5</span>
+        <span class="box1 item1">박스1박스1박스1박스1박스1박스1박스1박스1박스1박스11박스1박스1박스1박스1박스1박스11박스1박스1박스11박스1박스1박스1박스1박스1박스11박스1박스1박스11박스1박스1박스1박스1박스1박스11박스1박스1박스11박스1박스1박</span>
+        <span class="box1 item2">박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2박스2</span>
+        <span class="box1 item3">박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스3박스2박스2박스2박스2박스박스2박스2박</span>
+        <span class="box1 item4">박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박스4박v스4</span>
+        <span class="box1 item5">박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스5박스박스5박스5박스5박스5박스5박스5박</span>
     </div>
 </body>
 </html>

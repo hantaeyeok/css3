@@ -1490,71 +1490,547 @@ conic-gradient(
 
 ![컬럼시스템](./columns.png)
 
+<br><br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 컬럼 시스템</title>
+    <style>
+    * { margin: 0; padding: 0; }
+    body { width:100%; overflow-x:hidden; }
+    ul { list-style: none; }
+    .wrap { width: 100%; clear:both; }
+    .wrap:after { content:""; display:block; width: 100%; clear: both;}
+    .page { clear:both; width: 960px; margin: 20px auto; }
+    .title { text-align: center; padding-top: 2rem; 
+        padding-bottom: 0.5rem; }
+    .lst { column-count:3; column-rule:1px solid #333; column-gap:60px; }
+    .lst li { padding-bottom:50px; }
+    .lst li.post img { display:block; width: 100%; }
+    .lst li.post.span { column-span:all; }
+    .cate_tit { padding-top: 50px; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <section class="page">
+            <h2 class="title">2024 걸그룹 속보</h2>
+            <ul class="lst">
+                <li class="post">
+                    <div>
+                        <h3 class="cate_tit">아이브(IVE)</h3>
+                        <p><img src="./ive.webp" alt="아이브">청순 콘셉트를 지나 다시금 걸 크러시 콘셉트가 트렌드로 돌아온 4세대 걸그룹답게 IVE 또한 걸 크러시 콘셉트를 기반으로 데뷔를 했으나, IVE만의 결정적인 차별점이 있다면 바로 걸크러시하면 떠오르는 파워풀한 콘셉트가 아닌 ‘소녀’라는 정체성을 유지하면서 거기에 ‘자기애’라는 이미지를 곁들인 색다른 콘셉트를 시도했다는 점이다.
+
+                            걸그룹 판에서 걸 크러시로 대두되는 그룹은 흔히 말하는 센 언니라는 기믹을 전면적으로 내세우며 파워풀하고 섹시한 이미지와 콘셉트[3]를 지향한다. 그러나 IVE의 경우 일단 시대가 변하고 트렌드도 변하면서 대중들은 단순히 강렬하고 센 느낌의 콘셉트가 아닌, 보다 다양하고 색다른 모습을 원하게 된 점을 미루어 궁리하고 연구한 끝에 자신감 넘치는 아름다운 소녀 이미지를 구축해 독자적인 차별화를 시도했다.[4]
+                            
+                            사실 이 차별화는 현재 걸크러시 콘셉트로 활동하는 걸그룹 대부분에게 해당되는 말이긴 하다. 당당하고 주체적인 소녀 콘셉트의 정석에 가까운 ITZY, 콘셉트추얼함과 자체 제작으로 승부를 보는 (여자)아이들, 독자적인 세계관과 음악 스타일로 어필하는 aespa 등. 하지만 IVE는 다른 걸 크러시 콘셉트 걸그룹들이 주로 랩, 힙합에 가까운 구성을 갖춘 음악을 내세우는 것과는 달리[5] 타 그룹보다 보컬과 멜로디의 비중이 더 높은 음악을 내세움으로써 좀 더 대중성 있고 트렌디한 음악을 한다는 평가를 받는다. 이에 더해, IVE의 노래들은 2000년대 후반 ~ 2010년대 초중반에 전성기를 누렸던 2세대 걸그룹들의 노래와도 비슷한 느낌을 많이 주기 때문에 이로 인해 호감을 느끼는 팬들도 상당히 많다.</p>
+                    </div>
+                </li>
+                <li class="post span">
+                    <div>
+                        <h3 class="cate_tit">케플러(Kepler)</h3>
+                        <p><img src="./kepler.webp" alt="케플러">언니 라인 멤버와 동생 라인 멤버로 구분하여 나누면, 언니라인은 1996년생인 최유진부터 2003년생인 김다연까지, 동생라인은 2004년생 히카루부터 2005년생인 강예서까지이다.[8]
+                            멤버들 간의 나이 차이도 큰 편. 맏언니인 최유진과 막내 강예서는 각각 1996년생과 2005년생으로 무려 9살 차이다. 이로 인해 세대 차가 생기는 웃픈 상황이 가끔 발생한다. 하지만 최유진이 동안이라 얼굴만 본다면 별로 차이가 없어 보인다.
+                            아이돌 그룹 중에선 흔치 않게 리더 뿐만 아니라 부리더가 따로 있다.[9] 리더와 부리더는 소속사에서 정해준 게 아니라, 멤버들이 의견을 교환하고 심사숙고해서, 직접 정했다고 한다. 리더와 부리더 선정에 관해, 멤버들 사이에 많은 대화와 논의가 있었던 것으로 보인다. 최유진과 마시로는 걸스플래닛 당시에도 모든 미션에서 리더였다.</p>
+                    </div>
+                </li>
+                <li class="post">
+                    <div>
+                        <h3 class="cate_tit">뉴진스(Newjeans)</h3>
+                        <p><img src="./newjeans.jpg" alt="뉴진스">대중음악은 일상과 초근접해 있는 문화이기 때문에 마치 매일 입는 옷과 같다. 특히 진(Jean)은 시대를 불문해 남녀노소 모두에게 사랑받아 온 아이템이다. 뉴진스(NewJeans)에는 매일 찾게 되고 언제 입어도 질리지 않는 진처럼 시대의 아이콘이 되겠다는 포부와 New Genes, 즉 새로운 시대를 열겠다는 각오도 동시에 담겨 있다. 5명의 멤버가 모여 어딘가 자유분방하면서도 결합력 있는 독특한 퍼포먼스를 선보인다. 소녀들이 '재밌게 즐긴다'란 표현이 어울리는 뉴진스만의 청춘 하이틴스러운 컨셉은 ‘자연스럽다’라는 느낌을 주어, 뉴진스가 많은 대중들에게 사랑 받는 데에 크게 기여한다.
+
+                            데뷔곡 Attention과 Hype Boy에서부터 대중들의 눈길을 사로잡는 참신한 군무로 "자칫하면 어려보이기만 할 수 있는 십대들을 데리고 최적의 컨셉으로 밀고나갔다"라는 평을 받으며 그룹의 이미지를 확실하게 각인시켰다. 이후 발매된 Ditto와 Super Shy 등 여러 곡에서 역시 무대를 순수하게 즐기며 뛰노는듯한 멤버들의 모습으로 좋은 평가를 받았다.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
+```
+
 <br><hr><br>
 
 ## 9. CSS grid 속성
 
-그리드 컨테이너
+### 9-1. 그리드 컨테이너에 지정하는 속성
 
-display
+| 속성 및 도메인 | 설명 |
+|-----------------------------------------------------------|------------------------------------|
+| grid: none &#124; grid-template-rows / grid-template-columns&#124;grid-template-areas&#124;grid-template-rows / [grid-auto-flow] grid-auto-columns&#124;[grid-auto-flow] grid-auto-rows / grid-template-columns | 그리드 통합 속성 |
+| grid-template-rows: none &#124; auto &#124; max-content &#124; min-content &#124; length | 전체 그리드 열의 행 높이를 지정합니다. |
+| grid-template-columns: none&#124;auto &#124; max-content &#124; min-content &#124; length | 전체 그리드 열의 너비를 지정합니다. |
+| grid-template-areas: none &#124; itemnames | 각 그리드 열의 이름을 활용하여 배치 레이아웃을 만듭니다. |
+| grid-template: none &#124; grid-template-rows / grid-template-columns &#124; grid-template-areas | 그리드 행의 높이와 열의 각 너비를 지정하거나 그리드 열의 이름을 활용해 배치 레이아웃을 만듭니다. |
+| row-gap: length &#124; normal | 각 행과 행 사이의 여백을 지정합니다. |
+| column-gap: length &#124; normal | 각 열과 열 사이의 여백을 지정합니다. |
+| gap: row-gap column-gap | 행과 열 사이의 여백을 지정합니다. |
+| justify-items: legacy &#124; normal &#124; stretch &#124; left &#124; right &#124; center &#124; start &#124; end &#124; overflow-alignment &#124; baseline alignment | 그리드 컨테이너에 설정되어 하위 요소를 인라인 방향으로 정렬합니다. |
+| grid-auto-rows: auto &#124; max-content &#124; min-content &#124; length | 그리드 컨테이너의 행 크기를 설정합니다. |
+| grid-auto-columns: auto &#124; max-content &#124; min-content &#124; length | 그리드 컨테이너의 열 크기를 설정합니다. |
+| grid-auto-flow: row &#124; column &#124; dense &#124; row dense &#124; column dense | 자동 배치된 항목이 그리드에 삽입되는 방식을 제어합니다. |
 
-grid-template-rows
+<br><br>
 
-grid-template-columns
+### 9-2. 그리드 아이템에 지정하는 속성
 
-grid-template-areas
+| 속성 및 도메인 | 설명 |
+|-----------------------------------------------------------|------------------------------------|
+| grid-row-start: auto &#124; row-line &#124; span n | 항목이 시작될 행을 정의합니다. |
+| grid-row-end: auto &#124; row-line &#124; span n | 항목이 끝나는 행을 정의합니다. |
+| grid-column-start: auto &#124; column-line &#124; span n | 현재 행에서 항목이 시작될 컬럼을 정의합니다. |
+| grid-column-end: auto &#124; column-line &#124; span n | 현재 행에서 끝나는 항목을 정의합니다. |
+| grid-row: grid-row-start / grid-row-end | 그리드 레이아웃에서 그리드 항목의 크기와 위치를 지정하며 다음 항목에 대한 단축 속성입니다. |
+| grid-column: grid-column-start / grid-column-end | 그리드 레이아웃에서 그리드 항목의 크기와 위치를 지정하며 다음 속성에 대한 단축 속성입니다. |
+| grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end &#124; itemname | 그리드 레이아웃에서 그리드 항목의 크기와 위치를 지정하거나 현재 항목의 그리드 상에서의 항목이름을 규정하는 속성입니다. |
+| justify-self: auto &#124; normal &#124; stretch &#124; positional alignment &#124; overflow-alignment &#124; baseline alignment | 그리드 셀 내의 그리드 항목을 인라인 방향으로 정렬합니다. |
+| align-self: auto &#124; stretch &#124; center &#124; flex-start &#124; flex-end &#124; baseline | Flexbox 또는 그리드 컨테이너 내에서 선택한 항목에 대한 블록 방향의 정렬을 지정합니다. |
 
-grid-template
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 레이아웃 실습</title>
+    <style>
+    * { margin: 0; padding: 0; }
+    body, html { width: 100%; overflow-x:hidden; }
+    .title { text-align: center; padding-top: 2rem; padding-bottom: 1rem; }
+    .wrap { clear:both; width: 100%; min-height:400px; }
+    .comment { width: 1280px; margin:8px auto; font-size:20px; 
+    text-align: center; }
+    .lst { list-style: none; width:1280px; margin:20px auto; 
+        display:grid; }
+    .lst li { line-height: 100px; border:5px solid deepskyblue; 
+    font-size:24px; text-align: center; box-sizing:border-box; }
+    .item1 { background-color: coral; }
+    .item2 { background-color: lightblue; }
+    .item3 { background-color: pink; }
+    .item4 { background-color: lightcyan; }
+    .item5 { background-color: lightsalmon; }
+    .item6 { background-color: lightgoldenrodyellow; }
+    .item7 { background-color: lightgrey; }
+    .item8 { background-color: lightskyblue; }
+    .item9 { background-color: azure; }
+    .item10 { background-color: burlywood; }
+    .item11 { background-color: cornsilk; }
+    .item12 { background-color: ivory; }
 
-row-gap
+    .grid1 { grid : 100px / auto auto auto; height:400px; }
+    .grid2 { grid : 'myArea myArea .' 'myArea myArea .'; }
+    .grid2 .item1 { grid-area:myArea; }
+    .grid3 { grid-template-rows: 100px 300px; }
+    .grid4 { grid-template-columns: 300px 500px 400px; }
+    .grid5 { grid-template-areas: "area1 area1 area1 area2 . . area5 area5 area6 area6 area6 area6"; }
+    .grid5 .item1 { grid-area:area1; }
+    .grid5 .item2 { grid-area:area2; }
+    .grid5 .item5 { grid-area:area5; }
+    .grid5 .item6 { grid-area:area6; }
+    .grid6 { grid-template : 200px / 400px 200px 600px; }
+    .grid7 { grid-template : 'myArea myArea .' 'myArea myArea .'; }
+    .grid7 .item1 { grid-area:myArea; }
+    .grid8 { row-gap:50px; }
+    .grid9 { grid-template-columns:300px 100px 400px; column-gap: 50px; }
+    .grid10 { gap:50px; grid-template-columns:100px 200px 100px; }
 
-column-gap
+    /* legacy | normal | stretch | positional alignment | overflow-alignment | baseline alignment*/
+    .grid11, .grid12, .grid13, .grid14, .grid15, .grid16, .grid17, .grid18, .grid19, .grid20, .grid21, .grid22, .grid23, .grid24 { background-color:#ececec; }
+    .grid11 { grid-template-columns:1fr 1fr 1fr; justify-items: legacy;  }
+    .grid12 { grid-template-columns:1fr 1fr 1fr; justify-items: left;  }
+    .grid13 { grid-template-columns:1fr 1fr 1fr; justify-items: stretch;  }
+    .grid14 { grid-template-columns:1fr 1fr 1fr; justify-items: right;  }
+    .grid15 { grid-template-columns:1fr 1fr 1fr; justify-items: normal;  }
+    .grid16 { grid-template-columns:1fr 1fr 1fr; justify-items: center;  }
+    .grid17 { grid-template-columns:1fr 1fr 1fr; justify-items: start;  }
+    .grid18 { grid-template-columns:1fr 1fr 1fr; justify-items: end;  }
 
-gap
 
-justify-items
+    .grid19 { grid-template-columns:1fr 1fr 1fr; grid-auto-rows:auto; }
+    .grid20 { grid-template-columns:1fr 1fr 1fr; grid-auto-rows:50px; }
 
-align-items
+    .grid21 { grid-auto-columns:auto; }
+    .grid22 { grid-auto-columns:150px; }
 
-justify-content
+    .grid23, .grid24, .grid25, .grid26, .grid27 { grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto; }
+    .grid23 { grid-auto-flow:row; }
+    .grid24 { grid-auto-flow:column; }
+    .grid25 { grid-auto-flow:dense; }
+    .grid26 { grid-auto-flow:row dense; }
+    .grid27 { grid-auto-flow:column dense; }
 
-align-content
+    .grid31 { grid-template-columns: auto auto auto auto;  }
+    .grid31 .item1 { grid-row-start: 2; }
+    .grid32 { grid-template-columns: auto auto auto auto; }
+    .grid32 .item1 { grid-row-start: span 2;  }
 
-grid-auto-rows
 
-grid-auto-columns
-
-grid-auto-flow
-
-grid
-
-그리드 아이템 
-
-grid-row-start 
-
-grid-row-end 
-
-grid-column-start 
-
-grid-column-end 
-
-grid-row 
-
-grid-column
-
-grid-area
-
-justify-self
-
-align-self
-
+    </style>
+</head>
+<body>
+    <h1 class="title">그리드 레이아웃 실습</h1>
+    <br><hr><br>
+    <h1 class="title">그리드의 컨테이너에 부여하는 속성</h1>
+    <div class="wrap">
+        <h2 class="title">1. grid : 100px / auto auto auto</h2>
+        <p class="comment">grid-template-rows / grid-template-columns</p>
+        <ul class="lst grid1">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">2. grid : 'myArea myArea .' 'myArea myArea .'</h2>
+        <p class="comment">grid 속성에 grid-template-areas 를 지정하여 배치</p>
+        <ul class="lst grid2">
+            <li class="box item1">1. myArea</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">3. grid-template-rows: 100px 300px;</h2>
+        <p class="comment">첫 행 100px, 두 번째 행 300px</p>
+        <ul class="lst grid3">
+            <li class="box item1">1. row-height:100px; </li>
+            <li class="box item2">2. row-height:300px;</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">4. grid-template-columns: 300px 500px 400px;</h2>
+        <p class="comment">첫 열 너비 : 300px, 두 번째 열 너비 : 500px, 세 번째 열 너비 : 400px</p>
+        <ul class="lst grid4">
+            <li class="box item1">1. column-width : 300px</li>
+            <li class="box item2">2. column-width : 500px</li>
+            <li class="box item3">3. column-width : 400px</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">5. grid-template-areas: "area1 area1 area1 area2 . ."</h2>
+        <p class="comment">12컬럼을 배분 : 3 2 1 1 2 3</p>
+        <ul class="lst grid5">
+            <li class="box item1">1. area1</li>
+            <li class="box item2">2. area2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5. area5</li>
+            <li class="box item6">6. area6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">6. grid-template : 200px / 400px 200px 600px</h2>
+        <p class="comment">grid-template-rows / grid-template-columns</p>
+        <ul class="lst grid6">
+            <li class="box item1">1.</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">7. grid-template : 'myArea myArea .' 'myArea myArea .'</h2>
+        <p class="comment">grid-template 속성에 grid-template-areas 를 지정하여 배치</p>
+        <ul class="lst grid7">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">8. row-gap: 50px</h2>
+        <p class="comment">row-gap 속성을 이용하여 행과 행 사이의 여백을 지정</p>
+        <ul class="lst grid8">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">9. column-gap: 50px; grid-template-columns:300px 100px 400px; </h2>
+        <p class="comment">column-gap 속성을 이용하여 열과 열 사이의 여백을 지정</p>
+        <ul class="lst grid9">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">10. gap: 50px; grid-template-columns:100px 200px 100px; </h2>
+        <p class="comment">gap 속성을 이용하여 행과 행, 열과 열 사이의 여백을 지정</p>
+        <ul class="lst grid10">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+            <li class="box item7">7</li>
+            <li class="box item8">8</li>
+            <li class="box item9">9</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">11. justify-items: legacy;</h2>
+        <p class="comment">grid 내부의 하위 요소에 대한 정렬을 정의하며, legacy는 한 행을 각 요소를 꽉 차게 채웁니다.</p>
+        <ul class="lst grid11">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">12. justify-items: left;</h2>
+        <p class="comment">grid 내부의 하위 요소에 대한 정렬을 정의하며, left는 한 행을 각 요소를 왼쪽으로 정렬합니다.</p>
+        <ul class="lst grid12">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">13. justify-items: stretch;</h2>
+        <p class="comment">grid 내부의 하위 요소에 대한 정렬을 정의하며, stretch는 한 행에 꽉 차게 각 열을 늘려서 채웁니다.</p>
+        <ul class="lst grid13">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">14. justify-items: right;</h2>
+        <p class="comment">grid 내부의 하위 요소에 대한 정렬을 정의하며, right는 한 행을 각 요소를 오른쪽으로 정렬합니다.</p>
+        <ul class="lst grid14">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">15. justify-items: normal;</h2>
+        <p class="comment">grid 내부의 하위 요소에 대한 정렬을 정의하며, normal은 한 행을 각 요소를 꽉 차게 채웁니다.</p>
+        <ul class="lst grid15">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">16. justify-items: center;</h2>
+        <p class="comment">grid 내부의 하위 요소에 대한 정렬을 정의하며, center는 한 행을 각 요소를 가운데 정렬하도록 합니다.</p>
+        <ul class="lst grid16">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">17. justify-items: start;</h2>
+        <p class="comment">grid 내부의 하위 요소에 대한 정렬을 정의하며, start는 한 행의 각 요소를 시작위치에 맞추어 정렬합니다.</p>
+        <ul class="lst grid17">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">18. justify-items: end;</h2>
+        <p class="comment">grid 내부의 하위 요소에 대한 정렬을 정의하며, end는 한 행의 각 요소를 끝위치에 맞추어 정렬합니다.</p>
+        <ul class="lst grid18">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">19. grid-auto-rows:auto;</h2>
+        <p class="comment">그리드 컨테이너의 행 크기를 설정하며, auto는 자동으로 크기가 지정됩니다.</p>
+        <ul class="lst grid19">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">20. grid-auto-rows:50px;</h2>
+        <p class="comment">그리드 컨테이너의 행 크기를 설정하며, 50px는 해당 크기로 고정되어 지정됩니다.</p>
+        <ul class="lst grid20">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">21. grid-auto-columns:auto;</h2>
+        <p class="comment">그리드 컨테이너의 열 크기를 설정하며, auto는 각 요소를 너비를 자동으로 조절합니다.</p>
+        <ul class="lst grid21">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">22. grid-auto-columns:150px;</h2>
+        <p class="comment">그리드 컨테이너의 열 크기를 설정하며, 150px는 각 요소의 너비가 150px로 고정됩니다.</p>
+        <ul class="lst grid22">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">23. grid-auto-flow: row;</h2>
+        <p class="comment">자동 배치된 항목이 그리드에 삽입되는 방식을 제어하며, row는 수평 방향으로 배치합니다.</p>
+        <ul class="lst grid23">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">24. grid-auto-flow: column;</h2>
+        <p class="comment">자동 배치된 항목이 그리드에 삽입되는 방식을 제어하며, column는 수직 방향으로 배치합니다.</p>
+        <ul class="lst grid24">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">25. grid-auto-flow: dense;</h2>
+        <p class="comment">자동 배치된 항목이 그리드에 삽입되는 방식을 제어하며, dense는 혼합 배분 방식으로 배치합니다.</p>
+        <ul class="lst grid25">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">26. grid-auto-flow: row dense;</h2>
+        <p class="comment">자동 배치된 항목이 그리드에 삽입되는 방식을 제어하며, row dense는 수평 방향으로 배치하다가 혼합 방식으로 배치합니다.</p>
+        <ul class="lst grid26">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">27. grid-auto-flow: column dense;</h2>
+        <p class="comment">자동 배치된 항목이 그리드에 삽입되는 방식을 제어하며, column dense는 수직 방향으로 배치하다가 혼합 방식으로 배치합니다.</p>
+        <ul class="lst grid27">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+        </ul>
+    </div>
+    <br><hr><br>
+    <h1 class="title">그리드의 아이템에 부여하는 속성</h1>
+    <div class="wrap">
+        <h2 class="title">1. grid-row-start: 2;</h2>
+        <p class="comment">항목이 시작될 행을 정의하며, 2는 2번째 부터 시작함을 의미합니다.</p>
+        <ul class="lst grid31">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <h2 class="title">2. grid-row-start: span 2;</h2>
+        <p class="comment">항목이 시작될 행을 정의하며, span 2는 두 번째 줄까지 합치기를 의미합니다.</p>
+        <ul class="lst grid32">
+            <li class="box item1">1</li>
+            <li class="box item2">2</li>
+            <li class="box item3">3</li>
+            <li class="box item4">4</li>
+            <li class="box item5">5</li>
+            <li class="box item6">6</li>
+        </ul>
+    </div>
+</body>
+</html>
+```
 
 <br><hr><br>
 
 ## 10. CSS Flex 속성
 
-| 속성명 | 도메인 | 설명 | 예시 |
-|------------|--------------------------------------------------|------------------------------------|-----------------------------|
+| 속성 및 도메인 | 설명|
+|---------------------------------------------------------------------------|----------------------------------------------|
+| flex |  |
+| flex-grow |  |
+| flex-shrink |  |
+| flex-basis |  |
 
 <br><hr><br>
 
